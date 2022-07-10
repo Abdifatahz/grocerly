@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/abdifatah/code/ASP/Grocerly/Grocerly.csproj": {}
+    "/Users/abdifatah/Code/ASP/Grocerly/Grocerly.csproj": {}
   },
   "projects": {
-    "/Users/abdifatah/code/ASP/Grocerly/Grocerly.csproj": {
+    "/Users/abdifatah/Code/ASP/Grocerly/Grocerly.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/abdifatah/code/ASP/Grocerly/Grocerly.csproj",
+        "projectUniqueName": "/Users/abdifatah/Code/ASP/Grocerly/Grocerly.csproj",
         "projectName": "Grocerly",
-        "projectPath": "/Users/abdifatah/code/ASP/Grocerly/Grocerly.csproj",
+        "projectPath": "/Users/abdifatah/Code/ASP/Grocerly/Grocerly.csproj",
         "packagesPath": "/Users/abdifatah/.nuget/packages/",
-        "outputPath": "/Users/abdifatah/code/ASP/Grocerly/obj/",
+        "outputPath": "/Users/abdifatah/Code/ASP/Grocerly/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/abdifatah/.nuget/NuGet/NuGet.Config"
