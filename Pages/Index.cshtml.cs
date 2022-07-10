@@ -1,19 +1,40 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Logging;
 
-namespace Grocerly.Pages;
+using Grocerly.Models;
 
-public class IndexModel : PageModel
+namespace Grocerly.Pages
 {
-    private readonly ILogger<IndexModel> _logger;
-
-    public IndexModel(ILogger<IndexModel> logger)
+    public class IndexModel : PageModel
     {
-        _logger = logger;
-    }
 
-    public void OnGet()
-    {
+        [BindProperty]
+        public int Rating { get; set; }
+        [BindProperty]
+        public string Feedback { get; set; }
+
+        public List<GroceryItem> Foods = Inventory.ToList();
+
+        public void OnGet()
+        {
+
+        }
+
+        public async Task OnPostAsync()
+        {
+            using (StreamWriter writer = new StreamWriter("feedback.txt", append: true))
+            {
+                await writer.WriteLineAsync($"{DateTime.Now} Rating: {Rating}");
+                await writer.WriteLineAsync($"{DateTime.Now} {Feedback}");
+            }
+
+        }
 
     }
 }
